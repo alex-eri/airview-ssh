@@ -1,0 +1,32 @@
+<? xml version="1.0" encoding="utf-8" ?>
+
+<jnlp spec="6.0+" href="airview.jnlp" >
+   <information>
+      <title>airView - SSH tunneled</title>
+      <vendor>Ubiquiti Networks, Inc.</vendor>
+      <description>airView Client for airOS</description>
+      <homepage href="http://localhost/index.cgi" />
+      <description kind="short">airView</description>
+      <icon href="airview_32.png" />
+      <icon kind="splash" href="airview-splash.png" />
+      <shortcut />
+   </information>
+   <update check="always" policy="always" />
+   <resources>
+      <jar href="airview.jar" main="true" download="eager" />
+      <j2se 
+        version="1.6.0_15+" 
+        href="http://java.sun.com/products/autodl/j2se"
+        initial-heap-size="64m"
+        max-heap-size="64m"
+        />
+     <property name="jnlp.packEnabled" value="true" />
+   </resources>
+   <application-desc main-class="com.ubnt.app.AirViewer">
+        <argument>ubnt://localhost:18888</argument>
+   </application-desc>
+   <security>
+     <all-permissions />
+   </security>
+</jnlp>
+
